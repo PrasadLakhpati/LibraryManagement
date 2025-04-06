@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Library Management System</h1>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active" data-page="dashboard">Dashboard</a></li>
+                    <li><a href="#" data-page="books">Books</a></li>
+                    <li><a href="#" data-page="members">Members</a></li>
+                    <li><a href="#" data-page="transactions">Transactions</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="main-content">
+            <!-- Dashboard Section -->
+            <section id="dashboard" class="page active">
+                <h2>Dashboard</h2>
+                <div class="dashboard-stats">
+                    <div class="stat-card">
+                        <h3>Total Books</h3>
+                        <p id="total-books">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Total Members</h3>
+                        <p id="total-members">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Books Borrowed</h3>
+                        <p id="books-borrowed">0</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Books Section -->
+            <section id="books" class="page">
+                <h2>Books Management</h2>
+                <div class="action-bar">
+                    <button id="add-book-btn">Add New Book</button>
+                    <input type="search" id="book-search" placeholder="Search books...">
+                </div>
+                <table id="books-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Title</th>
+                            <th>Author</th>
+                            <th>Category</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Books will be dynamically added here -->
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Members Section -->
+            <section id="members" class="page">
+                <h2>Members Management</h2>
+                <div class="action-bar">
+                    <button id="add-member-btn">Add New Member</button>
+                    <input type="search" id="member-search" placeholder="Search members...">
+                </div>
+                <table id="members-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Members will be dynamically added here -->
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Transactions Section -->
+            <section id="transactions" class="page">
+                <h2>Transactions</h2>
+                <div class="action-bar">
+                    <button id="new-transaction-btn">New Transaction</button>
+                    <input type="search" id="transaction-search" placeholder="Search transactions...">
+                </div>
+                <table id="transactions-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Book</th>
+                            <th>Member</th>
+                            <th>Issue Date</th>
+                            <th>Due Date</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Transactions will be dynamically added here -->
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+
+    <!-- Modals -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modal-body">
+                <!-- Modal content will be dynamically added here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="js/database.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html> 
